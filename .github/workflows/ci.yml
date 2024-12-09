@@ -1,0 +1,33 @@
+name: CI
+on:
+  pull_request:
+  push:
+    branches: main
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Typo Check
+        uses: crate-ci/typos@master
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: cachix/install-nix-action@v30
+        with:
+          nix_path: nixpkgs=channel:nixos-unstable
+
+      # NOTE init in test package still unstable
+      # Now the CI is a quick fix for 2024 TBW
+      # https://github.com/MystenLabs/sui/issues/20389
+      - name: Run test
+        run: nix --accept-flake-config develop -c sui-move test --lint --coverage
+
+      - name: Show test coverage
+        run: nix --accept-flake-config develop -c sui-move coverage summary
