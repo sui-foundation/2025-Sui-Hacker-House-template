@@ -23,6 +23,9 @@ jobs:
         with:
           nix_path: nixpkgs=channel:nixos-unstable
 
+      # NOTE init in test package still unstable
+      # Now the CI is a quick fix for 2024 TBW
+      # https://github.com/MystenLabs/sui/issues/20389
       - name: Run test
         run: nix --accept-flake-config develop -c sui-move test --warnings-are-errors --lint --coverage
 
