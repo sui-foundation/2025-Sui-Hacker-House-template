@@ -1,4 +1,3 @@
-/*
 #[test_only]
 module template::template_tests;
 // uncomment this line to import the module
@@ -15,4 +14,3 @@ fun test_template() {
 fun test_template_fail() {
     abort ENotImplemented
 }
-*/
