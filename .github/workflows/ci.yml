@@ -27,7 +27,7 @@ jobs:
       # Now the CI is a quick fix for 2024 TBW
       # https://github.com/MystenLabs/sui/issues/20389
       - name: Run test
-        run: nix --accept-flake-config develop -c sui-move test --warnings-are-errors --lint --coverage
+        run: nix --accept-flake-config develop -c sui-move test --lint --coverage
 
       - name: Show test coverage
         run: nix --accept-flake-config develop -c sui-move coverage summary
