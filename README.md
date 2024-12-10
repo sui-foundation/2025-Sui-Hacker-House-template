@@ -15,4 +15,6 @@ This is a move template for you easy to try move to write a contract, and the CI
 This template is ready to deploy as you wish.
 If you want to change the project name, just rename following
 - `name` field of `[package]` section in `Move.toml`
+- `template` field of `[address]` section in `Move.toml`
 - rename the file `template.move` and the `module` name in the top of the file
+Please reference this [PR](https://github.com/yanganto/GororoWarranty/pull/1)
