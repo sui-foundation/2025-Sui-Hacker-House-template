@@ -1,6 +1,6 @@
 # 2024-TBW-template
-2024 Taipei Blockchain Week Move contract template
-
+This template is a material for the [slides](https://slides.com/yanganto/tbw-2024) in Taipei Blockchain Week.
+The talk will present in Dec 12, 2024.
 
 ### How to use
 
