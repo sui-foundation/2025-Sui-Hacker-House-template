@@ -1,6 +1,8 @@
 # 2024-TBW-template
-This template is a material for the [slides](https://slides.com/yanganto/tbw-2024) in Taipei Blockchain Week.
-The talk will present in Dec 12, 2024.
+This template is a material for the [slides](https://slides.com/yanganto/tbw-2024) in the following events.
+- Dec 12 Taipei Blockchain Week
+- Dec 16 Taiwan Builder House 
+
 
 ### How to use
 
