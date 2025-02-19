@@ -1,0 +1,78 @@
+name: UpdateBadge
+concurrency:
+  group: update-badge-${{ github.head_ref }}
+  cancel-in-progress: true
+
+on:
+  push:
+    branches: main
+
+jobs:
+  UpdateBadge:
+    runs-on: ubuntu-latest
+    permissions:
+      actions: write
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: cachix/install-nix-action@v30
+        with:
+          nix_path: nixpkgs=channel:nixos-unstable
+
+      - name: Generate a contract coverage value
+        id: contract-coverage
+        run: |
+          nix --accept-flake-config develop -c sui-move test --coverage
+          COVERAGE="$(nix --accept-flake-config develop -c sui-move coverage summary | tail -2 | head -1 | awk '{print $5}')"
+          COLOR=$([[ ${COVERAGE%%.*} -gt 90 ]] && echo "green" ||
+            [[ ${COVERAGE%%.*} -gt 80 ]] && echo "yellow,green" ||
+            [[ ${COVERAGE%%.*} -gt 70 ]] && echo "yellow" ||
+            [[ ${COVERAGE%%.*} -gt 60 ]] && echo "orange,yellow" ||
+            [[ ${COVERAGE%%.*} -gt 50 ]] && echo "orange" ||
+            [[ ${COVERAGE%%.*} -gt 40 ]] && echo "red,orange" ||
+            [[ ${COVERAGE%%.*} -gt 30 ]] && echo "red,red,orange" ||
+            [[ ${COVERAGE%%.*} -gt 20 ]] && echo "red,red,red,orange" ||
+            echo "red")
+          echo "##[set-output name=coverage;]${COVERAGE}%"
+          echo "##[set-output name=color;]$COLOR"
+
+      - name: Generate contract coverage badge SVG image
+        uses: emibcn/badge-action@v2
+        with:
+          label: 'Contract Test Coverage'
+          status: ${{ steps.contract-coverage.outputs.coverage }}
+          color: ${{ steps.storage-contract-coverage.outputs.color }}
+          path: .github/badges/coverage.svg
+
+      - name: Generate sui version value
+        id: sui-version
+        run: |
+          SUIVERSION="$(nix --accept-flake-config develop -c sui-move -V | awk '{print $2}')"
+          echo "##[set-output name=sui-version;]${SUIVERSION}"
+
+      - name: Generate sui version badge SVG image
+        uses: emibcn/badge-action@v2
+        with:
+          label: 'Sui'
+          status: ${{ steps.sui-version.outputs.sui-version }}
+          color: 4da2ff
+          path: .github/badges/sui-version-badge.svg
+
+      - name: Commit badge
+        id: commit-badge
+        continue-on-error: true
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .github/badges/*
+          git commit -m "update badges"
+
+      - name: Push badge commit
+        if: steps.commit-badge.outcome == 'success' && steps.commit-badge.conclusion == 'success'
+        uses: ad-m/github-push-action@master
+        with:
+          branch: ${{ github.head_ref }}

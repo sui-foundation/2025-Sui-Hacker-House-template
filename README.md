@@ -1,8 +1,12 @@
-# 2024-TBW-template
-This template is a material for the [slides](https://slides.com/yanganto/tbw-2024) in the following events.
-- Dec 12 Taipei Blockchain Week
-- Dec 16 Taiwan Builder House 
+2025-Sui-Hacker-House-template 
+---
+![SuiVersion](./.github/badges/sui-version-badge.svg)
+![Coverage](./.github/badges/coverage.svg)
 
+This template is a material for the [slides](https://slides.com/yanganto/tbw-2024) in the following events.
+- 2025 Feb 21 Shenzhen Sui Hacker House 
+- 2024 Dec 16 Taiwan Builder House 
+- 2024 Dec 12 Taipei Blockchain Week
 
 ### How to use
 
