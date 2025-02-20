@@ -1,0 +1,20 @@
+<svg width="187.5" height="20" viewBox="0 0 1875 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Contract Test Coverage: 0.00%">
+  <title>Contract Test Coverage: 0.00%</title>
+  <linearGradient id="a" x2="0" y2="100%">
+    <stop offset="0" stop-opacity=".1" stop-color="#EEE"/>
+    <stop offset="1" stop-opacity=".1"/>
+  </linearGradient>
+  <mask id="m"><rect width="1875" height="200" rx="30" fill="#FFF"/></mask>
+  <g mask="url(#m)">
+    <rect width="1405" height="200" fill="#555"/>
+    <rect width="470" height="200" fill="#" x="1405"/>
+    <rect width="1875" height="200" fill="url(#a)"/>
+  </g>
+  <g aria-hidden="true" fill="#fff" text-anchor="start" font-family="Verdana,DejaVu Sans,sans-serif" font-size="110">
+    <text x="60" y="148" textLength="1305" fill="#000" opacity="0.25">Contract Test Coverage</text>
+    <text x="50" y="138" textLength="1305">Contract Test Coverage</text>
+    <text x="1460" y="148" textLength="370" fill="#000" opacity="0.25">0.00%</text>
+    <text x="1450" y="138" textLength="370">0.00%</text>
+  </g>
+  
+</svg>

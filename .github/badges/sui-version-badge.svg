@@ -1,0 +1,20 @@
+<svg width="125.6" height="20" viewBox="0 0 1256 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sui: 1.43.1-unstable">
+  <title>Sui: 1.43.1-unstable</title>
+  <linearGradient id="a" x2="0" y2="100%">
+    <stop offset="0" stop-opacity=".1" stop-color="#EEE"/>
+    <stop offset="1" stop-opacity=".1"/>
+  </linearGradient>
+  <mask id="m"><rect width="1256" height="200" rx="30" fill="#FFF"/></mask>
+  <g mask="url(#m)">
+    <rect width="275" height="200" fill="#555"/>
+    <rect width="981" height="200" fill="#4da2ff" x="275"/>
+    <rect width="1256" height="200" fill="url(#a)"/>
+  </g>
+  <g aria-hidden="true" fill="#fff" text-anchor="start" font-family="Verdana,DejaVu Sans,sans-serif" font-size="110">
+    <text x="60" y="148" textLength="175" fill="#000" opacity="0.25">Sui</text>
+    <text x="50" y="138" textLength="175">Sui</text>
+    <text x="330" y="148" textLength="881" fill="#000" opacity="0.25">1.43.1-unstable</text>
+    <text x="320" y="138" textLength="881">1.43.1-unstable</text>
+  </g>
+  
+</svg>
