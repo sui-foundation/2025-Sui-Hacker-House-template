@@ -94,11 +94,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1742798883,
+        "lastModified": 1742802200,
         "narHash": "sha256-p5JAHaEgWoAlbvKNnI1D9eUtdx8eyxPzhXEXb/tISYo=",
         "owner": "yanganto",
         "repo": "sui",
-        "rev": "6b99295048035c0ab03eb7e6e9959bc63f773a36",
+        "rev": "87ca88f26314ec59b356a42266953b8c16b4e196",
         "type": "github"
       },
       "original": {
