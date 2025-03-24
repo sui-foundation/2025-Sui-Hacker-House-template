@@ -74,3 +74,8 @@ fun init(ctx: &mut TxContext) {
 // === Private Functions ===
 
 // === Test Functions ===
+// The setup function can use in the test packages, it is current practice
+#[test_only]
+public fun init_for_testing(ctx: &mut TxContext) {
+    init(ctx);
+}
