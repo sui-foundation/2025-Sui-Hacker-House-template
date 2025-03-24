@@ -45,7 +45,7 @@ jobs:
         with:
           label: 'Contract Test Coverage'
           status: ${{ steps.contract-coverage.outputs.coverage }}
-          color: ${{ steps.storage-contract-coverage.outputs.color }}
+          color: ${{ steps.contract-coverage.outputs.color }}
           path: .github/badges/coverage.svg
 
       - name: Generate sui version value
