@@ -1,5 +1,5 @@
-<svg width="125.6" height="20" viewBox="0 0 1256 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sui: 1.43.1-unstable">
-  <title>Sui: 1.43.1-unstable</title>
+<svg width="125.6" height="20" viewBox="0 0 1256 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sui: 1.44.3-unstable">
+  <title>Sui: 1.44.3-unstable</title>
   <linearGradient id="a" x2="0" y2="100%">
     <stop offset="0" stop-opacity=".1" stop-color="#EEE"/>
     <stop offset="1" stop-opacity=".1"/>
@@ -13,8 +13,8 @@
   <g aria-hidden="true" fill="#fff" text-anchor="start" font-family="Verdana,DejaVu Sans,sans-serif" font-size="110">
     <text x="60" y="148" textLength="175" fill="#000" opacity="0.25">Sui</text>
     <text x="50" y="138" textLength="175">Sui</text>
-    <text x="330" y="148" textLength="881" fill="#000" opacity="0.25">1.43.1-unstable</text>
-    <text x="320" y="138" textLength="881">1.43.1-unstable</text>
+    <text x="330" y="148" textLength="881" fill="#000" opacity="0.25">1.44.3-unstable</text>
+    <text x="320" y="138" textLength="881">1.44.3-unstable</text>
   </g>
   
 </svg>
