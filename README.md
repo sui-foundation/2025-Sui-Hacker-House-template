@@ -4,6 +4,8 @@
 ![Coverage](./.github/badges/coverage.svg)
 
 This template is a material for the [slides](https://slides.com/yanganto/dive-into-move-on-sui) in the following events.
+- 2025 Apr 2 Bangkok Sui Hacker House
+  - Live Demo: https://github.com/yanganto/Tic-tac-toe
 - 2025 Mar 28 Tokyo Sui Hacker House
 - 2025 Feb 21 Shenzhen Sui Hacker House 
 - 2024 Dec 16 Taiwan Builder House 
