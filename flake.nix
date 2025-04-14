@@ -19,7 +19,7 @@
     };
 
     sui-flake = {
-      url = "github:yanganto/sui/flake-testnet-v1.44.3";
+      url = "github:yanganto/sui/flake-sui-move-testnet-v1.46.1";
       inputs = {
         nixpkgs.follows = "nixpkgs";
         flake-utils.follows = "flake-utils";
