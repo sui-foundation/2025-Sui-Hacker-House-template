@@ -94,16 +94,16 @@
         ]
       },
       "locked": {
-        "lastModified": 1742802200,
-        "narHash": "sha256-p5JAHaEgWoAlbvKNnI1D9eUtdx8eyxPzhXEXb/tISYo=",
+        "lastModified": 1744602966,
+        "narHash": "sha256-MR2Ku2RrBVZPa65mJFbSvbI3xms/umKllIF6/XEeIg4=",
         "owner": "yanganto",
         "repo": "sui",
-        "rev": "87ca88f26314ec59b356a42266953b8c16b4e196",
+        "rev": "a1efc3d99fbeb2b59958f8505537b169b0b35f8c",
         "type": "github"
       },
       "original": {
         "owner": "yanganto",
-        "ref": "flake-testnet-v1.44.3",
+        "ref": "flake-sui-move-testnet-v1.46.1",
         "repo": "sui",
         "type": "github"
       }
